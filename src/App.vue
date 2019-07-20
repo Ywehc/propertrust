@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <Navigation></Navigation>
+    <Home></Home>
     <img class="home-banner" alt="" src="./assets/home-banner-img.jpg">
     <HelloWorld msg="Welcome to Your Vue.js App"/>
   </div>
@@ -9,12 +10,14 @@
 <script>
 import HelloWorld from './components/HelloWorld.vue'
 import Navigation from './components/Navigation.vue'
+import Home from './pages/Home.vue'
 
 export default {
   name: 'app',
   components: {
     HelloWorld,
-    Navigation
+    Navigation,
+    Home
   }
 }
 </script>
