@@ -1,0 +1,16 @@
+{
+    "brand": [
+        {
+            "brandname": "ProperTrust",
+            "pet": "cat"
+        },
+        {
+            "name": "bob",
+            "pet": "dog"
+        },
+        {
+            "name": "moe",
+            "pet": "mosquito"
+        }
+    ]
+}
