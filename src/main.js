@@ -5,6 +5,8 @@ import App from './App.vue'
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap-vue/dist/bootstrap-vue.css';
 
+import './style/style-global.scss';
+
 Vue.use(BootstrapVue);
 
 Vue.config.productionTip = false
