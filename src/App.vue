@@ -2,7 +2,7 @@
   <div id="app">
     <Navigation></Navigation>
     <Home></Home>
-    <img class="home-banner" alt="" src="./assets/home-banner-img.jpg">
+    <!-- <img class="home-banner" alt="" src="./assets/home-banner-img.jpg"> -->
     <HelloWorld msg="Welcome to Your Vue.js App"/>
   </div>
 </template>
