@@ -1,6 +1,6 @@
 <template>
-  <div class="about">
-    <h1>About test</h1>
+  <div class="pricing">
+    <h1>Pricing test</h1>
   <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
   </div>
 </template>
@@ -11,7 +11,7 @@
 
 
 export default {
-  name: 'about',
+  name: 'pricing',
   components: {
     
   }
