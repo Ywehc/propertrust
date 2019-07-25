@@ -1,9 +1,11 @@
 <template>
-  <div class="home-container">
+  <div class="home">
+    <div class="home-container">
       <div class="container">
         <div class="row buying-selling">
           <div class="col-6 buying">
             <div class="buyer-button">
+              <router-link to="/B1-purchase-type"></router-link>
               <h2>I am <strong>buying</strong></h2>
               <p>a house, apartment or condo.</p>
             </div>
@@ -16,22 +18,26 @@
           </div>
         </div>
       </div>
+    </div>
+  <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
   </div>
 </template>
 
 <script>
-import '../style/style-global.scss';
+// @ is an alias to /src
+// import HelloWorld from '@/components/HelloWorld.vue'
+
 
 export default {
-  name: 'Home',
-  props: {
-    msg: String
+  name: 'home',
+  components: {
+    
   }
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
+
 $light: #d9dcd6;
 $dark: #16425b;
 $light-blue: #81c3d7;
@@ -44,11 +50,13 @@ h2 {
   padding: 10px;
 }
 .home-container {
-  background: $light;
   padding: 50px;
 }
+.buyer-button {
+  background-image: linear-gradient(to right, #16425b, #2f6690);
+}
 .buyer-button, .seller-button {
-  max-width: 400px;
+  max-width: 380px;
   --diameter: 100px;
   padding: var(--diameter);
   border: 2px solid #16425b;
@@ -60,6 +68,9 @@ h2 {
   background: white;
   margin: 0;
   padding: 10px;
+}
+.seller-button {
+  background-image: linear-gradient(to right, #3a7ca5, #81c3d7 );
 }
 @media only screen and (max-width: 992px) {
   .buyer-button, .seller-button {
@@ -103,5 +114,6 @@ h2 {
   }
 }
 
-
 </style>
+
+
