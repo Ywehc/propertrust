@@ -7,9 +7,13 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav ml-auto">
-          <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
-          <a class="nav-item nav-link" href="#">Account</a>
-          <a class="nav-item nav-link" href="#">Pricing</a>
+          <router-link to="/" class="nav-item nav-link">Home
+            <span class="sr-only">
+              (current)
+            </span>
+          </router-link>
+          <router-link to="/pricing" class="nav-item nav-link">Pricing</router-link>
+          <router-link to="/account" class="nav-item nav-link">Account</router-link>
         </div>
       </div>
     </nav>
