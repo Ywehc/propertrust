@@ -22,7 +22,6 @@
 
 <script>
 import json from '../copy/data.json'
-import '../style/style-global.scss'
 
 export default {
   name: 'Navigation',
@@ -39,15 +38,11 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style style lang="scss" scoped>
-$light: #d9dcd6;
-$dark: #16425b;
-$light-blue: #81c3d7;
-$mid-blue: #3a7ca5;
-$dark-blue: #2f6690;
+@import url('https://fonts.googleapis.com/css?family=Passion+One&display=swap');
 
 .navbar-brand {
   color: $dark-blue;
-  font-weight: bold;
+  font-family: 'Passion One', cursive;
   font-size: 30px;
   border: 10px solid $light-blue;
   border-radius: 5%;

@@ -37,6 +37,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import url('https://fonts.googleapis.com/css?family=Varela+Round&display=swap');
 
 $light: #d9dcd6;
 $dark: #16425b;
@@ -47,7 +48,14 @@ $dark-blue: #2f6690;
 h2 {
   background: white;
   margin: 0;
-  padding: 10px;
+  padding: 6px 6px 0px 6px;
+  font-family: 'Varela Round', sans-serif;
+  font-size: 20px;
+  border-top: 5px solid $dark;
+  border-left: 5px solid $dark;
+  border-right: 5px solid $dark;
+  border-top-left-radius: 10%;
+  border-top-right-radius: 10%;
 }
 .home-container {
   padding: 50px;
@@ -56,7 +64,7 @@ h2 {
   background-image: linear-gradient(to right, #16425b, #2f6690);
 }
 .buyer-button, .seller-button {
-  max-width: 380px;
+  max-width: 360px;
   --diameter: 100px;
   padding: var(--diameter);
   border: 2px solid #16425b;
@@ -67,7 +75,14 @@ h2 {
 .buyer-button p, .seller-button p {
   background: white;
   margin: 0;
-  padding: 10px;
+  padding: 6px;
+  font-family: 'Varela Round', sans-serif;
+  font-size: 14px;
+  border-bottom: 5px solid $dark;
+  border-left: 5px solid $dark;
+  border-right: 5px solid $dark;
+  border-bottom-left-radius: 10%;
+  border-bottom-right-radius: 10%;
 }
 .seller-button {
   background-image: linear-gradient(to right, #3a7ca5, #81c3d7 );
