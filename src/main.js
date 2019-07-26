@@ -5,8 +5,9 @@ import App from './App.vue'
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap-vue/dist/bootstrap-vue.css';
 
-import './style/style-global.scss';
 import router from './router'
+
+import "@/style/variables.scss";
 
 Vue.use(BootstrapVue);
 

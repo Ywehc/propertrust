@@ -1,5 +1,5 @@
 <template>
-  <div class="pricing">
+  <div class="global-test">
     <h1>Pricing test</h1>
   <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
   </div>
