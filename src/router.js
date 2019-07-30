@@ -25,6 +25,11 @@ export default new Router({
       path: '/pricing',
       name: 'pricing',
       component: () => import('./views/Pricing.vue')
+    },
+    {
+      path: '/selling',
+      name: 'selling',
+      component: () => import('./views/Selling.vue')
     }
   ]
 })
