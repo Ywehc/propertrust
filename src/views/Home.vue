@@ -2,6 +2,9 @@
   <div class="home">
     <div class="home-container">
       <div class="container">
+        <div v-bind:id="home-header">
+          {{copy.home.header}}
+        </div>
         <div class="row buying-selling">
           <div class="col-6 buying">
             <div class="buyer-button">
@@ -31,6 +34,8 @@
 </template>
 
 <script>
+import json from '../copy/data.json'
+import copy from '../copy/copy.json'
 // @ is an alias to /src
 // import HelloWorld from '@/components/HelloWorld.vue'
 
@@ -41,9 +46,11 @@ export default {
     
   }
 }
+console.log(copy.home.header);
 </script>
 
 <style lang="scss" scoped>
+
 @import url('https://fonts.googleapis.com/css?family=Varela+Round&display=swap');
 
 h2 {
@@ -69,8 +76,8 @@ h2 {
   text-decoration: none;
 }
 .buyer-button, .seller-button {
-  max-width: 360px;
-  --diameter: 100px;
+  max-width: 300px;
+  --diameter: 80px;
   padding: var(--diameter);
   border: 2px solid #16425b;
   border-radius: 50%;

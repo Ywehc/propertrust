@@ -2,7 +2,7 @@
     "brand": [
         {
             "brandname": "ProperTrust",
-            "pet": "cat"
+            "home-header": "cat"
         },
         {
             "name": "bob",
@@ -13,4 +13,5 @@
             "pet": "mosquito"
         }
     ]
+    
 }

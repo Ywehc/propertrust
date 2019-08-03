@@ -1,7 +1,7 @@
 <template>
   <div>
     <nav class="navbar navbar-expand-lg">
-      <router-link to="/" class="navbar-brand" v-for="copy in myJson" v-bind:key="copy.id"> {{ copy[0].brandname }}</router-link>
+      <router-link to="/" class="navbar-brand" v-for="copy in myJson" v-bind:key="copy.id"> {{ copy[0].brandname }}<img class="header-img" src="../assets/logo-img.png"></router-link>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -36,15 +36,16 @@ export default {
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style style lang="scss" scoped>
-@import url('https://fonts.googleapis.com/css?family=Passion+One&display=swap');
 
+.header-img {
+  max-width: 40px;
+}
 .navbar-brand {
   color: $dark-blue;
   font-family: 'Passion One', cursive;
   font-size: 30px;
-  border: 10px solid $light-blue;
+  border: 6px solid $light-blue;
   border-radius: 5%;
   padding: 10px;
 }
