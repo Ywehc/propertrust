@@ -1,7 +1,8 @@
 <template>
   <div>
     <nav class="navbar navbar-expand-lg">
-      <router-link to="/" class="navbar-brand" v-for="copy in myJson" v-bind:key="copy.id"> {{ copy[0].brandname }}<img class="header-img" src="../assets/logo-img.png"></router-link>
+      <router-link to="/" class="navbar-brand"> {{ message }}<img class="header-img" src="../assets/logo-img.png"></router-link>
+      <!-- <router-link to="/" class="navbar-brand" v-for="copy in myJson" v-bind:key="copy.id"> {{ copy[0].brandname }}<img class="header-img" src="../assets/logo-img.png"></router-link> -->
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -21,19 +22,22 @@
 </template>
 
 <script>
-import json from '../copy/data.json'
+
+import copy from '../copy/copy.json'
 
 export default {
   name: 'Navigation',
   props: {
     msg: String,
   },
-  data(){
-    return{
-      myJson: json
-    }
+  data: function() {
+    return {
+    message: copy.brand
+    };
   }
 }
+
+console.log(copy.home.header);
 </script>
 
 <style style lang="scss" scoped>

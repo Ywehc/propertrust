@@ -7,7 +7,6 @@
 <script>
 
 // consider making each step its own component - constructor?
-import json from '../copy/data.json'
 import SellerSummary from './SellerSummary.vue';
 
 export default {
