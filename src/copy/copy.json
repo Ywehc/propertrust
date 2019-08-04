@@ -2,6 +2,9 @@
     "header": "Simple, secure real estate transactions without the costs of agents.",
     "subheader": "subheading"
     },
- "brand": "ProperTrust"
+ "brand": "ProperTrust",
+ "footer": {
+     "copyright": "Ⓒ 2019 Chris Kieran"
+ }
 }
 

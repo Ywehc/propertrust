@@ -2,9 +2,9 @@
   <div class="home">
     <div class="home-container">
       <div class="container">
-        <p>
+        <h1>
           {{ heading }}
-        </p>
+        </h1>
         <div class="row buying-selling">
           <div class="col-6 buying">
             <div class="buyer-button">
@@ -58,6 +58,12 @@ export default {
 
 @import url('https://fonts.googleapis.com/css?family=Varela+Round&display=swap');
 
+h1 {
+  font-size: 30px;
+  text-align: center;
+  margin-bottom: 40px;
+  color: $dark;
+}
 h2 {
   padding: 6px 6px 0px 6px;
   font-size: 20px;

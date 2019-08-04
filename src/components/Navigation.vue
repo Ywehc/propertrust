@@ -2,7 +2,6 @@
   <div>
     <nav class="navbar navbar-expand-lg">
       <router-link to="/" class="navbar-brand"> {{ message }}<img class="header-img" src="../assets/logo-img.png"></router-link>
-      <!-- <router-link to="/" class="navbar-brand" v-for="copy in myJson" v-bind:key="copy.id"> {{ copy[0].brandname }}<img class="header-img" src="../assets/logo-img.png"></router-link> -->
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -37,7 +36,6 @@ export default {
   }
 }
 
-console.log(copy.home.header);
 </script>
 
 <style style lang="scss" scoped>
@@ -52,6 +50,13 @@ console.log(copy.home.header);
   border: 6px solid $light-blue;
   border-radius: 5%;
   padding: 10px;
+}
+.collapse a {
+  color: $light-blue;
+}
+.collapse a:hover {
+  color: $dark;
+  font-weight: bold;
 }
 
 </style>
