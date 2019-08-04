@@ -2,9 +2,9 @@
   <div class="home">
     <div class="home-container">
       <div class="container">
-        <div v-bind:id="home-header">
+        <!-- <div v-bind:id="home-header">
           {{copy.home.header}}
-        </div>
+        </div> -->
         <div class="row buying-selling">
           <div class="col-6 buying">
             <div class="buyer-button">
