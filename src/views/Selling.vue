@@ -12,7 +12,10 @@
 import SellerProgress from '@/components/SellerProgress.vue'
 import SellerSummary from '@/components/SellerSummary.vue'
 
-// add variable for questions remaining?
+//problems to solve:
+// show user where they are in entire process - array tied to gradient?
+// display list ('question') conditionally rendered or routed from last question.
+
 
 export default {
   name: 'selling',
