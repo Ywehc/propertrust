@@ -17,11 +17,6 @@ export default {
   components: {
     'SellerProgress': SellerProgress
   },
-  data(){
-    return{
-      myJson: json
-    }
-  }
 }
 </script>
 
