@@ -17,11 +17,6 @@ export default {
   components: {
     'SellerSummary': SellerSummary
   },
-  data(){
-    return{
-      myJson: json
-    }
-  }
 }
 </script>
 

@@ -2,7 +2,7 @@
   <div>
     <SellerProgress></SellerProgress>
     <SellerSummary></SellerSummary>
-    <h1>Selling</h1>
+    <SellerQuestions></SellerQuestions>
   <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
   </div>
 </template>
@@ -11,6 +11,7 @@
 
 import SellerProgress from '@/components/SellerProgress.vue'
 import SellerSummary from '@/components/SellerSummary.vue'
+import SellerQuestions from '@/components/SellerQuestions.vue'
 
 //problems to solve:
 // show user where they are in entire process - array tied to gradient?
@@ -20,7 +21,7 @@ import SellerSummary from '@/components/SellerSummary.vue'
 export default {
   name: 'selling',
   components: {
-    SellerProgress, SellerSummary
+    SellerProgress, SellerSummary, SellerQuestions
   }
 }
 </script>

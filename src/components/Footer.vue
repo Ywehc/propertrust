@@ -27,7 +27,7 @@ export default {
 <style style lang="scss" scoped>
 
 footer {
-    height: 30vh;
+    height: 20vh;
     background: $dark;
     color: $light;
 }
