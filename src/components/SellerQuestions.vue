@@ -1,11 +1,23 @@
 <template>
   <div class="container">
-        <div>
+    <div>
       <b-tabs content-class="mt-3">
         <b-tab title="Seller" active>
             <div>
-                <b-form-input v-model="sellerName" placeholder="Full legal names of all Sellers"></b-form-input>
-                <div class="mt-2">Value: {{ sellerName }}</div>
+                <b-form-input 
+                  type="text"
+                  v-model="value"
+                  placeholder="Test">
+                </b-form-input>
+                <div class="mt-2">{{ value }}</div>
+            </div>
+            <div>
+                <b-form-input 
+                  type="text"
+                  v-model="sellerName"
+                  placeholder="Legal Name of Seller">
+                </b-form-input>
+                <div class="mt-2">{{ sellerName }}</div>
             </div>
         </b-tab>
         <b-tab title="Property"><p>Property Information</p>
@@ -30,13 +42,34 @@
 <script>
 
 export default {
-  name: 'SellerQuestions',
-  props: {
-    msg: String,
+  computed: {
+    value: {
+      get() {
+        return this.$store.getters.value;
+      },
+      set(value) {
+        this.$store.dispatch('updateValue', value);
+      }
+    },
+    sellerName: {
+      get() {
+        return this.$store.getters.sellerName;
+      },
+      set(sellerName) {
+        this.$store.dispatch('updateSellerName', sellerName);
+      }
+    }
+  },
+  methods: {
+    updateValue(event) {
+      this.$store.dispatch('updateValue', event.target.value);
+    },
+    updateSeller(event) {
+      this.$store.dispatch('updateSellerName', event.target.value);
+    }
   },
   data() {
       return {
-          sellerName: '',
           propertyAddress: '',
           propertyCity: '',
           frontageSelected: null,
