@@ -22,17 +22,43 @@
         </b-tab>
         <b-tab title="Property"><p>Property Information</p>
             <div>
-                <b-form-input v-model="propertyAddress" placeholder="Property Address"></b-form-input>
-                <div class="mt-2">Value: {{ propertyAddress }}</div>
-                <b-form-input v-model="propertyCity" placeholder="City"></b-form-input>
-                <div class="mt-2">Value: {{ propertyCity }}</div>
+                <div class="mt-2">Street Number: {{ propertyStreetNumber }}</div>
+                <b-form-input 
+                  type="text"
+                  v-model="propertyStreetNumber" 
+                  placeholder="Street Number">
+                </b-form-input>
+                <div class="mt-2">Street Name: {{ propertyStreetName }}</div>
+                <b-form-input 
+                  type="text" 
+                  v-model="propertyStreetName" 
+                  placeholder="Street Name">
+                </b-form-input>             
+                <div class="mt-2">City: {{ propertyCity }}</div>
+                <b-form-input 
+                  type="text" 
+                  v-model="propertyCity" 
+                  placeholder="City">
+                </b-form-input> 
+                <div class="mt-2">Province: {{ propertyProvince }}</div>
+                <b-form-input 
+                  type="text" 
+                  v-model="propertyProvince" 
+                  placeholder="Province">
+                </b-form-input>
+                <div class="mt-2">Postal Code: {{ propertyPostal}}</div>
+                <b-form-input 
+                  type="text" 
+                  v-model="propertyPostal" 
+                  placeholder="Postal Code">
+                </b-form-input>
                 <p>Frontage</p>
                 <b-form-select v-model="frontageSelected" :options="frontageOptions"></b-form-select>
                 <div class="mt-3">Selected: <strong>{{ frontageSelected }}</strong></div>
             </div>
         </b-tab>
             
-        <b-tab title="Contract"><p>I'm the second tab</p></b-tab>
+        <b-tab title="Contract"><p>Agreement Date: date-picker </p></b-tab>
         <!-- <b-tab title="Disabled" disabled><p>I'm a disabled tab!</p></b-tab> -->
       </b-tabs>
     </div>
@@ -58,6 +84,46 @@ export default {
       set(sellerName) {
         this.$store.dispatch('updateSellerName', sellerName);
       }
+    },
+    propertyStreetNumber: {
+      get() {
+        return this.$store.getters.propertyStreetNumber;
+      },
+      set(propertyStreetNumber) {
+        this.$store.dispatch('updatePropertyStreetNumber', propertyStreetNumber);
+      }
+    },
+    propertyStreetName: {
+      get() {
+        return this.$store.getters.propertyStreetName;
+      },
+      set(propertyStreetName) {
+        this.$store.dispatch('updatePropertyStreetName', propertyStreetName);
+      }
+    },
+    propertyCity: {
+      get() {
+        return this.$store.getters.propertyCity;
+      },
+      set(propertyCity) {
+        this.$store.dispatch('updatePropertyCity', propertyCity);
+      }
+    },
+    propertyProvince: {
+      get() {
+        return this.$store.getters.propertyProvince;
+      },
+      set(propertyProvince) {
+        this.$store.dispatch('updatePropertyProvince', propertyProvince);
+      }
+    },
+    propertyPostal: {
+      get() {
+        return this.$store.getters.propertyPostal;
+      },
+      set(propertyPostal) {
+        this.$store.dispatch('updatePropertyPostal', propertyPostal);
+      }
     }
   },
   methods: {
@@ -66,12 +132,25 @@ export default {
     },
     updateSeller(event) {
       this.$store.dispatch('updateSellerName', event.target.value);
+    },
+    updatePropertyStreetNumber(event) {
+      this.$store.dispatch('updatePropertyStreetNumber', propertyStreetNumber);
+    },
+    updatePropertyStreetName(event) {
+      this.$store.dispatch('updatePropertyStreetName', propertyStreetName);
+    },
+    updatePropertyCity(event) {
+      this.$store.dispatch('updatePropertyCity', propertyCity);
+    },
+    updatePropertyProvince(event) {
+      this.$store.dispatch('updatePropertyProvince', propertyProvince);
+    },
+    updatePropertyPostal(event) {
+      this.$store.dispatch('updatePropertyPostal', propertyPostal);
     }
   },
   data() {
       return {
-          propertyAddress: '',
-          propertyCity: '',
           frontageSelected: null,
           frontageOptions: [
               { value: null, text: 'Please select an option' },
