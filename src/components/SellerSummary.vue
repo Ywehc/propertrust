@@ -1,22 +1,21 @@
 <template>
   <div class="container">
-    <p>Seller Summary</p>
+    <p><strong>Seller Names:</strong> {{ this.$store.state.seller.legalName }}</p>
+    <p>
+      <strong>Property:</strong> 
+      {{ this.$store.state.property.streetNumber}}
+      {{ this.$store.state.property.streetName }},
+      {{ this.$store.state.property.city }},
+      {{ this.$store.state.property.province }},
+      {{ this.$store.state.property.postal}}
+    </p>
   </div>
 </template>
 
 <script>
 
-// consider making each step its own component - constructor?
-import SellerSummary from './SellerSummary.vue';
-
 export default {
-  name: 'SellerSummary',
-  props: {
-    msg: String,
-  },
-  components: {
-    'SellerSummary': SellerSummary
-  },
+
 }
 </script>
 

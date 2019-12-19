@@ -3,7 +3,6 @@
     <SellerProgress></SellerProgress>
     <SellerSummary></SellerSummary>
     <SellerQuestions></SellerQuestions>
-  <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
   </div>
 </template>
 
@@ -17,11 +16,12 @@ import SellerQuestions from '@/components/SellerQuestions.vue'
 // show user where they are in entire process - array tied to gradient?
 // display list ('question') conditionally rendered or routed from last question.
 
-
 export default {
   name: 'selling',
   components: {
     SellerProgress, SellerSummary, SellerQuestions
   }
 }
+
+
 </script>
