@@ -42,6 +42,9 @@ export default new Vuex.Store({
         propertyCity: state => {
             return state.property.city;
         },
+        propertyCountry: state => {
+            return state.property.country;
+        },
         propertyProvince: state => {
             return state.property.province;
         },
