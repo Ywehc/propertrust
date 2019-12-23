@@ -14,13 +14,22 @@ export default new Vuex.Store({
             city: '',
             province: '',
             postal: '',
-            country: 'Canada'
+            country: 'Canada',
+            frontage: '',
+            depth: '',
+            legalDescription: '',
+            chattelsIncluded: '',
+            fixturesExcluded: '',
+            rentalItems: ''
         },
+        contract: {
+            price: '',
+            deposit: '',
+            depositHolder: '',
+            completionDate: ''
+        }
     },
     getters: {
-        value: state => {
-            return state.value;
-        },
         sellerName: state => {
             return state.seller.legalName;
         },
@@ -38,15 +47,39 @@ export default new Vuex.Store({
         },
         propertyPostal: state => {
             return state.property.postal;
-        }
+        },
+        propertyFrontage: state => {
+            return state.property.frontage;
+        },
+        propertyDepth: state => {
+            return state.property.depth;
+        },
+        propertyLegalDescription: state => {
+            return state.property.legalDescription;
+        },
+        purchasePrice: state => {
+            return state.contract.price;
+        },
+        depositAmount: state => {
+            return state.contract.deposit;
+        },
+        depositHolder: state => {
+            return state.contract.depositHolder;
+        },
+        completionDate: state => {
+            return state.contract.completionDate;
+        },
+        chattelsIncluded: state => {
+            return state.property.chattelsIncluded;
+        },
+        fixturesExcluded: state => {
+            return state.property.fixturesExcluded;
+        },
+        rentalItems: state => {
+            return state.property.rentalItems;
+        },
     },
     mutations: {
-        updateMessage(state, message) {
-            state.obj.message = message
-        },
-        updateValue: (state, payload) => {
-            state.value = payload;
-        },
         updateSellerName: (state, payload) => {
             state.seller.legalName = payload;
         },
@@ -64,12 +97,39 @@ export default new Vuex.Store({
         },
         updatePropertyPostal: (state, payload) => {
             state.property.postal = payload;
-        }
+        },
+        updatePropertyFrontage: (state, payload) => {
+            state.property.frontage = payload;
+        },
+        updatePropertyDepth: (state, payload) => {
+            state.property.depth = payload;
+        },
+        updatePropertyLegalDescription: (state, payload) => {
+            state.property.legalDescription = payload;
+        },
+        updatePurchasePrice: (state, payload) => {
+            state.contract.price = payload;
+        },
+        updateDepositAmount: (state, payload) => {
+            state.contract.deposit = payload;
+        },
+        updateDepositHolder: (state, payload) => {
+            state.contract.depositHolder = payload;
+        },
+        updateCompletionDate: (state, payload) => {
+            state.contract.completionDate = payload;
+        },
+        updateChattelsIncluded: (state, payload) => {
+            state.property.chattelsIncluded = payload;
+        },
+        updateFixturesExcluded: (state, payload) => {
+            state.property.fixturesExcluded = payload;
+        },
+        updateRentalItems: (state, payload) => {
+            state.property.rentalItems = payload;
+        },
     },
     actions: {
-        updateValue({commit}, payload) {
-            commit('updateValue', payload);
-        },
         updateSellerName({commit}, payload) {
             commit('updateSellerName', payload);
         },
@@ -87,6 +147,36 @@ export default new Vuex.Store({
         },
         updatePropertyPostal({ commit }, payload) {
             commit('updatePropertyPostal', payload);
+        },
+        updatePropertyFrontage({ commit }, payload) {
+            commit('updatePropertyFrontage', payload);
+        },
+        updatePropertyDepth({ commit }, payload) {
+            commit('updatePropertyDepth', payload);
+        },
+        updatePropertyLegalDescription({ commit }, payload) {
+            commit('updatePropertyLegalDescription', payload);
+        },
+        updatePurchasePrice({ commit }, payload) {
+            commit('updatePurchasePrice', payload);
+        },
+        updateDepositAmount({ commit }, payload) {
+            commit('updateDepositAmount', payload);
+        },
+        updateDepositHolder({ commit }, payload) {
+            commit('updateDepositHolder', payload);
+        },
+        updateCompletionDate({ commit }, payload) {
+            commit('updateCompletionDate', payload);
+        },
+        updateChattelsIncluded({ commit }, payload) {
+            commit('updateChattelsIncluded', payload);
+        },
+        updateFixturesExcluded({ commit }, payload) {
+            commit('updateFixturesExcluded', payload);
+        },
+        updateRentalItems({ commit }, payload) {
+            commit('updateRentalItems', payload);
         }
     }
 });
