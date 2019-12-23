@@ -1,21 +1,24 @@
+/* eslint-disable */
 <template>
   <div class="container">
-    <p><strong>Seller Names:</strong> {{ this.$store.state.seller.legalName }}</p>
-    <p>
-      <strong>Property:</strong> 
-      {{ this.$store.state.property.streetNumber}}
-      {{ this.$store.state.property.streetName }},
-      {{ this.$store.state.property.city }},
-      {{ this.$store.state.property.province }},
-      {{ this.$store.state.property.postal}}
-    </p>
+    <h2>To sell 
+      <span v-if="propertyInputted"> {{ this.$store.state.property.streetNumber}} {{ this.$store.state.property.streetName }}</span>
+      <span v-else>Your property</span>, 
+      here's the information a Sales Agreement will need
+    </h2>
   </div>
 </template>
 
 <script>
 
 export default {
-
+  computed: {
+    propertyInputted () {
+      if ( this.$store.state.property.streetNumber !== '' && this.$store.state.property.streetName !== '') {
+        return true;
+      } 
+    }
+  }
 }
 </script>
 
