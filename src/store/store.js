@@ -8,6 +8,9 @@ export default new Vuex.Store({
         seller: {
             legalName: '',         
         },
+        buyer: {
+            legalName: '',
+        },
         property: {
             streetNumber: '',
             streetName: '',

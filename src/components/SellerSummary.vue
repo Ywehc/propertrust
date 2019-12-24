@@ -1,10 +1,10 @@
 <template>
   <div class="container">
-    <h2>To sell 
+    <h2>Complete the Property and Contract details below to generate a sales agreement for 
       <span v-if="propertyInputted"> {{ this.$store.state.property.streetNumber}} {{ this.$store.state.property.streetName }}</span>
-      <span v-else>Your property</span>, 
-      here's the information a Sales Agreement will need
+      <span v-else>your property</span>.
     </h2>
+    
   </div>
 </template>
 
@@ -26,8 +26,17 @@ export default {
 @import url('https://fonts.googleapis.com/css?family=Passion+One&display=swap');
 
 .container {
-    height: 10vh;
-    border: 10px solid $light;
+  color: $dark-blue;
+  font-family: 'Passion One', cursive;
+  padding: 16px 30px;
+}
+.container h2 {
+  font-size: 2.2em;
+}
+@media only screen and (max-width: 490px) {
+  .container h2 {
+    font-size: 1.5em;
+  }
 }
 
 </style>
