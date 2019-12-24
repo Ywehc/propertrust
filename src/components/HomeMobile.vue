@@ -40,7 +40,6 @@ export default {
 @import url('https://fonts.googleapis.com/css?family=Varela+Round&display=swap');
 
 .container {
-    margin-top: 20px;
     padding: 20px;
     display: flex;
     flex-direction: column;
