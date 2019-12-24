@@ -1,7 +1,9 @@
 <template>
   <div>
     <nav class="navbar navbar-expand-lg">
-      <router-link to="/" class="navbar-brand"> {{ message }}<img class="header-img" src="../assets/logo-img.png"></router-link>
+      <router-link to="/" class="navbar-brand"> 
+        {{ message }}<img class="header-img" src="../assets/logo-img.png">
+      </router-link>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -57,6 +59,10 @@ export default {
 .collapse a:hover {
   color: $dark;
   font-weight: bold;
+}
+
+@media only screen and (max-width: 490px) {
+  
 }
 
 </style>
