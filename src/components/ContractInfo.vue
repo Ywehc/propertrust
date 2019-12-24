@@ -1,5 +1,12 @@
 <template>
   <div>
+    <b-form-input 
+        type="text"
+        v-model="sellerName"
+        placeholder="Legal Name of Seller">
+    </b-form-input>
+    <div class="mt-2">{{ sellerName }}</div>
+    <hr>
     <p>Agreement Date: date-picker</p>
       <hr>
       <hr>
@@ -45,6 +52,14 @@
 
 export default {
     computed: {
+      sellerName: {
+        get() {
+            return this.$store.getters.sellerName;
+        },
+        set(sellerName) {
+            this.$store.dispatch('updateSellerName', sellerName);
+        }
+      },
       purchasePrice: {
         get() {
           return this.$store.getters.purchasePrice;
@@ -79,6 +94,9 @@ export default {
       }
     },
     methods: {
+      updateSeller(event) {
+        this.$store.dispatch('updateSellerName', event.target.value);
+      },
       updateDepositAmount(event) {
         this.$store.dispatch('updateDepositAmount', depositAmount);
       },

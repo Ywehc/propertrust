@@ -1,8 +1,9 @@
 <template>
 <div class="nav-shell">
-  <div class="nav-brand">
-    {{ message }}<img src="../assets/logo-img.png">
-  </div>
+  <router-link to="/" class="nav-brand">
+    {{ brand }}
+    <img src="../assets/logo-img.png">
+  </router-link>
   <div class="nav-desktop" v-if="windowWidth > 490">
     <ul>
       <router-link to="/" tag="li">Home</router-link>
@@ -26,7 +27,7 @@ export default {
   },
   data: function() {
     return {
-    message: copy.brand,
+    brand: copy.brand,
     windowWidth: screen.width
     };
   }
