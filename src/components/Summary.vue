@@ -52,7 +52,6 @@ export default {
             'purchasePrice',
             'depositAmount',
             'depositHolder'
-
         ])
     }
 }
