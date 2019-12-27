@@ -1,5 +1,6 @@
 import Vuex from 'vuex'
 import Vue from 'vue'
+import { getField, updateField} from "vuex-map-fields";
 
 Vue.use(Vuex);
 
@@ -9,7 +10,7 @@ export default new Vuex.Store({
             legalName: '',         
         },
         buyer: {
-            legalName: '',
+            legalName: 'Buyer Bob',
         },
         property: {
             streetNumber: '',
@@ -29,10 +30,16 @@ export default new Vuex.Store({
             price: '',
             deposit: '',
             depositHolder: '',
-            completionDate: ''
+            agreementDate: '',
+            irrevocabilityDate: '',
+            completionDate: '',
+            requisitionDate: ''
         }
     },
     getters: {
+        buyerName: state => {
+            return state.buyer.legalName;
+        },
         sellerName: state => {
             return state.seller.legalName;
         },
@@ -72,9 +79,6 @@ export default new Vuex.Store({
         depositHolder: state => {
             return state.contract.depositHolder;
         },
-        completionDate: state => {
-            return state.contract.completionDate;
-        },
         chattelsIncluded: state => {
             return state.property.chattelsIncluded;
         },
@@ -84,6 +88,19 @@ export default new Vuex.Store({
         rentalItems: state => {
             return state.property.rentalItems;
         },
+        agreementDate: state => {
+            return state.contract.agreementDate;
+        },
+        irrevocabilityDate: state => {
+            return state.contract.irrevocabilityDate;
+        },
+        completionDate: state => {
+            return state.contract.completionDate;
+        },
+        requisitionDate: state => {
+            return state.contract.requisitionDate;
+        },
+        getField
     },
     mutations: {
         updateSellerName: (state, payload) => {
@@ -122,9 +139,6 @@ export default new Vuex.Store({
         updateDepositHolder: (state, payload) => {
             state.contract.depositHolder = payload;
         },
-        updateCompletionDate: (state, payload) => {
-            state.contract.completionDate = payload;
-        },
         updateChattelsIncluded: (state, payload) => {
             state.property.chattelsIncluded = payload;
         },
@@ -134,6 +148,7 @@ export default new Vuex.Store({
         updateRentalItems: (state, payload) => {
             state.property.rentalItems = payload;
         },
+        updateField
     },
     actions: {
         updateSellerName({commit}, payload) {
@@ -171,9 +186,6 @@ export default new Vuex.Store({
         },
         updateDepositHolder({ commit }, payload) {
             commit('updateDepositHolder', payload);
-        },
-        updateCompletionDate({ commit }, payload) {
-            commit('updateCompletionDate', payload);
         },
         updateChattelsIncluded({ commit }, payload) {
             commit('updateChattelsIncluded', payload);
