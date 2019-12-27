@@ -17,7 +17,7 @@
         <div class="col-4 buying">
           <div class="buyer-button">
             <div class="button-content">
-              <router-link to="/B1-purchase-type">
+              <router-link to="/buying">
                 <h2>I am <strong>buying</strong></h2>
                 <p>a house, apartment or condo.</p>
               </router-link>

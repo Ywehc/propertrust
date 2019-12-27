@@ -24,5 +24,17 @@ export default new Router({
       name: 'selling',
       component: () => import('./views/Selling.vue')
     }
+    ,
+    {
+      path: '/buying',
+      name: 'buying',
+      component: () => import('./views/Buying.vue')
+    }
+    ,
+    {
+      path: '/how-it-works',
+      name: 'how-it-works',
+      component: () => import('./views/HowItWorks.vue')
+    }
   ]
 })
