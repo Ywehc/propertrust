@@ -20,12 +20,13 @@
         <p>Rental Items: {{ rentalItems }} </p>
         <hr>
         <h2>Agreement</h2>
+        <p>Agreement Date: {{ agreementDate }} </p>
         <p>Purchase Price: {{ purchasePrice }} </p>
         <p>Deposit Amount: {{ depositAmount }} </p>
         <p>Deposit Holder: {{ depositHolder }} </p>
-        <p>Irrevocability Date </p>
-        <p>Completion Date</p>
-        <p>Title Search/Requisition Date</p>
+        <p>Irrevocability Date: {{ irrevocabilityDate }} </p>
+        <p>Completion Date: {{ completionDate }}</p>
+        <p>Title Search/Requisition Date: {{requisitionDate}} </p>
     </div>
 </template>
 
@@ -51,7 +52,11 @@ export default {
             'rentalItems',
             'purchasePrice',
             'depositAmount',
-            'depositHolder'
+            'depositHolder',
+            'agreementDate',
+            'irrevocabilityDate',
+            'completionDate',
+            'requisitionDate'
         ])
     }
 }

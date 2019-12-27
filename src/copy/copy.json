@@ -10,6 +10,9 @@
  },
  "seller": {
      "generateAgreement": "I accept the terms and conditions."
+ },
+ "agreement": {
+    "deposit":""
  }
 }
 
