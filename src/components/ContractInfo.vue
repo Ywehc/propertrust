@@ -17,6 +17,11 @@
       v-model="purchasePrice" 
       placeholder="Purchase Price in Dollars (CDN$)">
     </b-form-input>
+    <div class="terms">
+      <input type="checkbox" id="HstCheckbox" v-model="newHome">
+      <label for="checkbox"></label>
+      <span>Check if this is a newly built property and HST will be in addition to the listed Purchase Price</span>
+    </div>
     <div class="mt-2">Deposit Amount: {{ depositAmount }}</div>
     <b-form-input 
       type="text" 
@@ -36,22 +41,7 @@
     <p>Completion Date: {{ contractCompletionDate }}</p>
     <vc-date-picker v-model="contractCompletionDate"/>
     <hr>
-    <div class="terms">
-      <input type="checkbox" id="HstCheckbox" v-model="newHome">
-      <label for="checkbox"></label>
-      <span>Check if this is a newly built property</span>
-    </div>
-    <hr>
-    <div class="terms" v-if="newHome">
-      <span>13% HST is included in purchase price or in addition to purchase price: {{ hstIncluded }}</span>
-      <br>
-      <input type="radio" id="one" value="HST is included in purchase price" v-model="hstIncluded">
-      <label for="one">Included in price</label>
-      <br>
-      <input type="radio" id="two" value="HST will be added to purchase price " v-model="hstIncluded">
-      <label for="two">In addition to price</label>
-      <div class="mt-2">Deposit Holder: {{ depositHolder }}</div>
-    </div>
+    <div class="mt-2">Deposit Holder: {{ depositHolder }}</div>
     <hr>
     <p>Title Search/Requisition Date: {{ contractRequisitionDate }}</p>
     <vc-date-picker v-model="contractRequisitionDate"/>
@@ -78,8 +68,7 @@ export default {
       contractIrrevocabilityDate: "contract.irrevocabilityDate",
       contractCompletionDate: "contract.completionDate",
       contractRequisitionDate: "contract.requisitionDate",
-      newHome: "contract.hasHst",
-      hstIncluded: "contract.hstIncluded"
+      newHome: "contract.hasHst"
     }),
     sellerName: {
       get() {
@@ -131,8 +120,3 @@ export default {
 }
 
 </script>
-
-<style style lang="scss" scoped>
-
-
-</style>

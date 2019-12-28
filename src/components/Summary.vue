@@ -5,29 +5,28 @@
         <hr>
         <h2>Property</h2>
         <p> {{ propertyStreetNumber }} {{ propertyStreetName }} </p>
-        <p> {{ propertyCity }}, {{ propertyProvince }} </p>
+        <p v-if="propertyCity !== '' && propertyProvince !== ''"> {{ propertyCity }}, {{ propertyProvince }} </p>
         <p> {{ propertyPostal }}
             <span v-if="propertyProvince !== '' && propertyPostal !== ''">, 
                 {{ propertyCountry }}
             </span> 
         </p>
-        <hr>
-        <p>Frontage: {{ propertyFrontage }} </p>
-        <p>Property Depth: {{ propertyDepth }} </p>
-        <p>Legal Description of Land: {{ propertyLegalDescription }} </p>
-        <p>Chattels Included: {{ chattelsIncluded }} </p>
-        <p>Fixtures Excluded: {{ fixturesExcluded }} </p>
-        <p>Rental Items: {{ rentalItems }} </p>
+        <p v-if="propertyFrontage !== ''">Frontage: {{ propertyFrontage }} </p>
+        <p v-if="propertyDepth !== ''">Property Depth: {{ propertyDepth }} </p>
+        <p v-if="propertyLegalDescription !== ''">Legal Description of Land: {{ propertyLegalDescription }} </p>
+        <p v-if="chattelsIncluded !== ''">Chattels Included: {{ chattelsIncluded }} </p>
+        <p v-if="fixturesExcluded !== ''">Fixtures Excluded: {{ fixturesExcluded }} </p>
+        <p v-if="rentalItems !== ''">Rental Items: {{ rentalItems }} </p>
         <hr>
         <h2>Agreement</h2>
-        <p>Agreement Date: {{ agreementDate }} </p>
-        <p>Purchase Price: {{ purchasePrice  }} </p>
-        <p>Total Price including HST {{ totalPrice}} </p>
-        <p>Deposit Amount: {{ depositAmount }} </p>
-        <p>Deposit Holder: {{ depositHolder }} </p>
-        <p>Irrevocability Date: {{ irrevocabilityDate }} </p>
-        <p>Completion Date: {{ completionDate }}</p>
-        <p>Title Search/Requisition Date: {{requisitionDate}} </p>
+        <p v-if="agreementDate !== ''">Agreement Date: {{ agreementDate }} </p>
+        <p v-if="purchasePrice !== ''">Purchase Price: {{ purchasePrice }} </p>
+        <p v-if="hasHst == true">Total Price including 15% HST {{ (purchasePrice * 1.15) }} </p>
+        <p v-if="depositAmount !== ''">Deposit Amount: {{ depositAmount }} </p>
+        <p v-if="depositHolder !== ''">Deposit Holder: {{ depositHolder }} </p>
+        <p v-if="irrevocabilityDate!== ''">Irrevocability Date: {{ irrevocabilityDate }} </p>
+        <p v-if="completionDate !== ''">Completion Date: {{ completionDate }}</p>
+        <p v-if="requisitionDate !== ''">Title Search/Requisition Date: {{requisitionDate}} </p>
     </div>
 </template>
 
@@ -57,7 +56,8 @@ export default {
             'agreementDate',
             'irrevocabilityDate',
             'completionDate',
-            'requisitionDate'
+            'requisitionDate',
+            'hasHst'
         ])
     }
 }

@@ -2,13 +2,13 @@
     <div>
         <div class="terms">
             <input type="checkbox" id="checkbox" v-model="checked">
-            <label for="checkbox">{{ checked }}</label>
-            <p>{{terms}}</p>
+            <label for="checkbox">{{terms}}</label>
         </div>
         <router-link 
             to="/agreement"
             tag="button"
             class="btn btn-lg"
+            :disabled="checked == false"
             >Create Sales Agreement
         </router-link>
     </div>
