@@ -8,8 +8,6 @@
     <ul>
       <router-link to="/" tag="li">Home</router-link>
       <router-link to="/how-it-works" tag="li">How it Works</router-link>
-      <router-link to="/" tag="li">Sign In/Sign Out</router-link>
-      <router-link to="/" tag="li">Settings</router-link>
     </ul>   
   </div>
 </div>
@@ -36,10 +34,11 @@ export default {
 </script>
 
 <style style lang="scss" scoped>
-
+.nav-brand {
+  text-decoration: none;
+}
 .nav-brand {
   color: $dark-blue;
-  font-family: 'Passion One', cursive;
   font-size: 30px;
   border: 6px solid $light-blue;
   border-radius: 5%;
@@ -52,16 +51,21 @@ export default {
 .nav-shell {
   padding: 10px;
   display: flex;
+  font-family: 'Passion One', cursive;
 }
 .nav-desktop {
   position: absolute;
   right: 20px;
+  color: $dark;
   ul {
     display: flex;
     list-style-type: none;
   }
   li {
     margin: 5px;
+  }
+  li:hover {
+    color: $light-blue;
   }
 }
 

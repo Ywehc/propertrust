@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="container">
         <div class="title">
             <h1>Agreement of Purchase and Sale</h1>
         </div>
