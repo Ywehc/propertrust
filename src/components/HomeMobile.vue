@@ -18,7 +18,6 @@
         </router-link>
         <br>
         <br>
-        <button type="button" class="btn btn-primary btn-sm sign-in">Sign In</button>
         <button type="button" class="btn btn-primary btn-sm contact">Contact Us</button>
       </div>
 </template>
@@ -37,7 +36,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import url('https://fonts.googleapis.com/css?family=Varela+Round&display=swap');
 
 .container {
     padding: 20px;
@@ -70,5 +68,6 @@ h1 {
   text-align: center;
   margin-bottom: 40px;
   color: $dark;
+  padding: 0px 20px;
 }
 </style>

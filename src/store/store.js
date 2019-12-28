@@ -33,7 +33,9 @@ export default new Vuex.Store({
             agreementDate: '',
             irrevocabilityDate: '',
             completionDate: '',
-            requisitionDate: ''
+            requisitionDate: '',
+            hasHst: false,
+            hstIncluded: ''
         }
     },
     getters: {

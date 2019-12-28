@@ -17,7 +17,7 @@
         <div class="col-4 buying">
           <div class="buyer-button">
             <div class="button-content">
-              <router-link to="/B1-purchase-type">
+              <router-link to="/buying">
                 <h2>I am <strong>buying</strong></h2>
                 <p>a house, apartment or condo.</p>
               </router-link>
@@ -54,7 +54,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import url('https://fonts.googleapis.com/css?family=Varela+Round&display=swap');
 .container {
   padding-bottom: 100px;
 }
@@ -81,7 +80,11 @@ h3 {
   min-height: 140px;
 }
 .button-content:hover  {
-  background: $light;
+  background: $dark;
+  border: 5px solid $light;
+  h2, p {
+    color: $light;
+  }
 }
 .buyer-button {
   background-image: linear-gradient(to right, #3a7ca5, #81c3d7 );

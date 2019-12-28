@@ -13,7 +13,7 @@
     <hr>
     <div class="mt-2">Purchase Price: {{ purchasePrice }}</div>
     <b-form-input 
-      type="text" 
+      type="number" 
       v-model="purchasePrice" 
       placeholder="Purchase Price in Dollars (CDN$)">
     </b-form-input>
@@ -36,8 +36,22 @@
     <p>Completion Date: {{ contractCompletionDate }}</p>
     <vc-date-picker v-model="contractCompletionDate"/>
     <hr>
-    <p>If HST applies, will it be included in or in addition to the Purchase Price?</p>
+    <div class="terms">
+      <input type="checkbox" id="HstCheckbox" v-model="newHome">
+      <label for="checkbox"></label>
+      <span>Check if this is a newly built property</span>
+    </div>
     <hr>
+    <div class="terms" v-if="newHome">
+      <span>13% HST is included in purchase price or in addition to purchase price: {{ hstIncluded }}</span>
+      <br>
+      <input type="radio" id="one" value="HST is included in purchase price" v-model="hstIncluded">
+      <label for="one">Included in price</label>
+      <br>
+      <input type="radio" id="two" value="HST will be added to purchase price " v-model="hstIncluded">
+      <label for="two">In addition to price</label>
+      <div class="mt-2">Deposit Holder: {{ depositHolder }}</div>
+    </div>
     <hr>
     <p>Title Search/Requisition Date: {{ contractRequisitionDate }}</p>
     <vc-date-picker v-model="contractRequisitionDate"/>
@@ -55,7 +69,7 @@ export default {
       agreementDate: new Date(),
       irrevocabilityDate: new Date(),
       completionDate: new Date(),
-      requisitionDate: new Date()
+      requisitionDate: new Date(),
     }
   },
   computed: {
@@ -63,7 +77,9 @@ export default {
       contractAgreementDate: "contract.agreementDate",
       contractIrrevocabilityDate: "contract.irrevocabilityDate",
       contractCompletionDate: "contract.completionDate",
-      contractRequisitionDate: "contract.requisitionDate"
+      contractRequisitionDate: "contract.requisitionDate",
+      newHome: "contract.hasHst",
+      hstIncluded: "contract.hstIncluded"
     }),
     sellerName: {
       get() {

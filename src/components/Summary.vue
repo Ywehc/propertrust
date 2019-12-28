@@ -21,7 +21,8 @@
         <hr>
         <h2>Agreement</h2>
         <p>Agreement Date: {{ agreementDate }} </p>
-        <p>Purchase Price: {{ purchasePrice }} </p>
+        <p>Purchase Price: {{ purchasePrice  }} </p>
+        <p>Total Price including HST {{ totalPrice}} </p>
         <p>Deposit Amount: {{ depositAmount }} </p>
         <p>Deposit Holder: {{ depositHolder }} </p>
         <p>Irrevocability Date: {{ irrevocabilityDate }} </p>
