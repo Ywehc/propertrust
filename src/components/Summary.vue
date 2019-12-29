@@ -1,10 +1,10 @@
 <template>
   <div>
         <h4 class="tab-content-heading">Purchase Summary</h4>
-        <h4>Sellers</h4>
+        <h5>Sellers</h5>
         <p>{{ sellerName }}</p>
         <hr>
-        <h4>Property</h4>
+        <h5>Property</h5>
         <p> {{ propertyStreetNumber }} {{ propertyStreetName }} </p>
         <p v-if="propertyCity !== '' && propertyProvince !== ''"> {{ propertyCity }}, {{ propertyProvince }} </p>
         <p> {{ propertyPostal }}
@@ -19,7 +19,7 @@
         <p v-if="fixturesExcluded !== ''">Fixtures Excluded: {{ fixturesExcluded }} </p>
         <p v-if="rentalItems !== ''">Rental Items: {{ rentalItems }} </p>
         <hr>
-        <h4>Agreement</h4>
+        <h5>Agreement</h5>
         <p v-if="agreementDate !== ''">Agreement Date: {{ agreementDate }} </p>
         <p v-if="purchasePrice !== ''">Purchase Price: {{ purchasePrice }} </p>
         <p v-if="hasHst == true">Total Price including 15% HST {{ (purchasePrice * 1.15) }} </p>

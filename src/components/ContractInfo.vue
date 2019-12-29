@@ -6,13 +6,10 @@
         v-model="sellerName"
         placeholder="Legal Name of Seller">
     </b-form-input>
-    <div class="mt-2">{{ sellerName }}</div>
-    <hr>
+    <div class="mt-4">{{ sellerName }}</div>
     <p>Agreement Date: {{ contractAgreementDate }}</p>
     <vc-date-picker v-model="contractAgreementDate"/>
-    <hr>
-    <hr>
-    <div class="mt-2">Purchase Price: {{ purchasePrice }}</div>
+    <div class="mt-4">Purchase Price: {{ purchasePrice }}</div>
     <b-form-input 
       type="number" 
       v-model="purchasePrice" 
@@ -23,30 +20,25 @@
       <label for="checkbox"></label>
       <span>Check if this is a newly built property and HST will be in addition to the listed Purchase Price</span>
     </div>
-    <div class="mt-2">Deposit Amount: {{ depositAmount }}</div>
+    <div class="mt-4">Deposit Amount: {{ depositAmount }}</div>
     <b-form-input 
       type="text" 
       v-model="depositAmount" 
       placeholder="Deposit in Dollars (CDN$)">
     </b-form-input>
-    <div class="mt-2">Deposit Holder: {{ depositHolder }}</div>
+    <div class="mt-4">Deposit Holder: {{ depositHolder }}</div>
     <b-form-input 
       type="text" 
       v-model="depositHolder" 
       placeholder="Name of deposit holder">
     </b-form-input>
-    <hr>
-    <p>Irrevocability Date: {{ contractIrrevocabilityDate }}</p>
+    <p class="mt-4">Irrevocability Date: {{ contractIrrevocabilityDate }}</p>
     <vc-date-picker v-model="contractIrrevocabilityDate"/>
-    <hr>
-    <p>Completion Date: {{ contractCompletionDate }}</p>
+    <p class="mt-4">Completion Date: {{ contractCompletionDate }}</p>
     <vc-date-picker v-model="contractCompletionDate"/>
-    <hr>
-    <div class="mt-2">Deposit Holder: {{ depositHolder }}</div>
-    <hr>
-    <p>Title Search/Requisition Date: {{ contractRequisitionDate }}</p>
+    <div class="mt-4">Deposit Holder: {{ depositHolder }}</div>
+    <p class="mt-4">Title Search/Requisition Date: {{ contractRequisitionDate }}</p>
     <vc-date-picker v-model="contractRequisitionDate"/>
-    <hr>
   </div>
 </template>
 

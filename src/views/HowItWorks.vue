@@ -1,15 +1,24 @@
 <template>
   <div class="container">
-    <h2>How it Works</h2>
-    <p>Not everyone can afford to pay Realtor fees of four, five or even six percent of their property's value when selling their home or apartment.</p>
-    <p>Our platform helps buyers and sellers of homes and apartments create lawyer-ready sales agreements.</p>
-    <p>We walk you through the agreement in simple language and then convert that into a convenient, lawyer-ready pdf</p>
-    <p>That's our current solution, but we can't wait for you to see some of the exciting ideas and features we have in the works!</p>
+    <p>{{p1}}</p>
+    <p>{{p2}}</p>
+    <p>{{p3}}</p>
+    <p>{{p4}}</p>
   </div>
 </template>
 
 <script>
+import copy from '../copy/copy.json'
+
 export default {
+  data() {
+    return {
+      p1: copy.howItWorks.p1,
+      p2: copy.howItWorks.p2,
+      p3: copy.howItWorks.p3,
+      p4: copy.howItWorks.p4
+    }
+  }
 }
 </script>
 
@@ -20,8 +29,11 @@ export default {
         text-align: center;
         margin-bottom: 20px;
     }
+    p {
+      font-size: 20px;
+    }
     .container {
         min-height: 60vh;
-        padding: 0px 40px;
+        padding: 20px 60px;
     }
 </style>

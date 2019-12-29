@@ -47,4 +47,7 @@ export default {
   color: $dark-blue!important;
   font-weight: bold;
 }
+.mt-3 {
+  min-height: 50vh;
+}
 </style>

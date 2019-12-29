@@ -32,11 +32,11 @@ export default {
 }
 .container h2 {
   font-size: 2.2em;
+  padding: 20px;
 }
 @media only screen and (max-width: 490px) {
   .container h2 {
-    font-size: 1.5em;
-    padding: 20px;
+    font-size: 1.5em;  
   }
 }
 

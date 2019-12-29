@@ -1,152 +1,178 @@
 <template>
     <div class="container">
-        <div class="title">
-            <h4>Agreement of Purchase and Sale</h4>
-        </div>
-        <div class="help-text">
-            <p>GENERAL USE:  {{ generalUse }} </p>
-        </div>
-        <div class="contract-text">
-            <p>This Agreement of Purchase and Sale dated this {{ agreementDate }}</p>
-            <p><strong>BUYER, {{ buyerName }}</strong>, agrees to purchase from</p>
-            <p><strong>SELLER, {{sellerName }} </strong></p>, the following
-            <p><strong>REAL PROPERTY:</strong> situated at</p>
-            <p>Address {{ propertyStreetNumber }} {{ propertyStreetName }}, {{ propertyCity }}, {{ propertyProvince }}, {{ propertyPostal }}, {{ propertyCountry}}</p>
-            <p>and legally described as {{ propertyLegalDescription }}, the 'property' </p>
-            <p><strong>PURCHASE PRICE: </strong><span>$CDN Canadian Dollars {{ purchasePrice}}</span></p>
-        </div>
-        <p class="help-text">DEPOSIT: {{ deposit }} </p>
-        <div class="contract-text">
-            <p><strong>DEPOSIT: Buyer submits herewidth {{ purchasePrice }} $CDN Canadian Dollars</strong></p>
-            <p>by negotiable cheque payable to {{ depositHolder }} {{ depositInfo }}</p>
-        </div>
-        <p class="help-text">1. {{ irrevocability1 }} </p>
-        <p class="contract-text">1. IRREVOCABILITY: This Offer shall be irrevocable by {{sellerName}} {{ buyerName }} 
-            until {{irrevocabilityDate}}, {{irrevocability2}}
-        </p>
-        <p class="help-text">2. {{completion1}} </p>
-        <div class="contract-text">
-            <p>2. {{completion2}} {{completionDate}}</p>
-            <p>{{completion3}}</p>
-        </div>
-        <p class="help-text">3. {{chattels1}} </p> 
-        <div class="contract-text">
-            <p>3. CHATTELS INCLUDED: {{chattelsIncluded}}</p>
-            <p>{{chattels2}}</p>
-        </div>
-        <p class="help-text">4. {{fixtures}}</p>
-        <p class="contract-text">4. FIXTURES EXCLUDED: {{fixturesExcluded}} </p>
-        <p class="help-text">5. {{rentals}}</p>
-        <p class="contract-text">5. RENTAL ITEMS: {{rentalItems}} </p>
-        <p class="help-text">6. {{hst1}}</p>
-        <p class="contract-text"><strong>6. HST:</strong> {{hst2}} </p>
-        <p class="help-text">7. {{titleSearch1}} </p>
-        <div class="contract-text">
-           <p><strong>7. TITLE SEARCH:</strong>Buyer shall be allowed until 6:00 p.m. on the {{requisitionDate}}</p>
-           <p>{{titleSearch2}}</p> 
-        </div>
-        <p class="help-text">8. {{futureUse1}}</p>
-        <p class="contract-text"><strong>8. FUTURE USE: </strong>{{futureUse2}}</p>
-        <p class="help-text">9. {{title1}}</p>
-        <p class="contract-text"><strong>9. TITLE: </strong>{{title2}}</p>
-        <p class="help-text">10. {{closing1}}</p>
-        <p class="contract-text"><strong>10. {{closing2}}</strong></p>
-        <p class="help-text">11. {{discharge1}} </p>
-        <p class="contract-text"><strong>11. DOCUMENTS AND DISCHARGE: </strong>{{discharge2}}</p>
-        <p class="help-text">12. {{inspection1}}</p>
-        <p class="contract-text"><strong>12. INSPECTION: </strong>{{inspection2}}</p>
-        <p class="help-text">13. {{insurance1}}</p>
-        <p class="contract-text"><strong>13. INSURANCE: {{insurance2}}</strong></p>
-        <p class="help-text">14. {{planning1}}</p>
-        <p class="contract-text"><strong>14. PLANNING ACT: </strong>{{planning2}}</p>
-        <p class="help-text">15. {{preparation1}}</p>
-        <p class="contract-text"><strong>15. DOCUMENT PREPARATION: </strong>{{preparation2}}</p>
-        <p class="help-text">16. {{residency1}}</p>
-        <p class="contract-text"><strong>16. RESIDENCY: </strong>{{residency2}}</p>
-        <p class="help-text">17. {{adjustments1}}</p>
-        <p class="contract-text"><strong>17. ADJUSTMENTS: </strong>{{adjustments2}}</p>
-        <p class="help-text">18. {{assessment1}}</p>
-        <p class="contract-text"><strong>18. PROPERTY ASSESSMENT: </strong>{{assessment2}} </p>
-        <p class="help-text">19. {{time1}}</p>
-        <p class="contract-text"><strong>19. TIME LIMITS: </strong>{{time2}}</p>
-        <p class="help-text">20. {{tender1}}</p>
-        <p class="contract-text"><strong>20. TENDER: </strong>{{tender2}}</p>
-        <p class="help-text">21. {{family1}}</p>
-        <p class="contract-text"><strong>21. FAMILY LAW ACT: </strong>{{family2}}</p>
-        <p class="help-text">22. {{uffi1}}</p>
-        <p class="contract-text"><strong>22. UFFI: </strong>{{uffi1}}</p>
-        <p class="help-text">23. {{consumer1}}</p>
-        <p class="contract-text"><strong>23. {{consumer2}}</strong></p>
-        <p class="help-text">24. {{writing1}}</p>
-        <p class="contract-text"><strong>24. AGREEMENT IN WRITING: </strong>{{writing2}}</p>
-        <p class="help-text">25. {{timeDate1}}</p>
-        <p class="contract-text"><strong>25. TIME AND DATE: </strong>{{timeDate2}}</p>
-        <p class="help-text">26. {{successors1}}</p>
-        <p class="contract-text"><strong>26. SUCCESSORS AND ASSIGNS: </strong>{{successors2}}</p>
-        <div class="signatures container">
-            <div class="row">
-                <div class="col-lg-4">
-                    <p>SIGNED, SEALED AND DELIVERED in the presence of: </p>
-                    <p>(Witness) __________________________</p>
-                    <p>(Witness) __________________________</p>
-                </div>
-                <div class="col-lg-4">
-                    <p>IN WITNESS whereof I have hereunto set my hand and seal:</p><p>(Witness) __________________________</p>
-                    <p>(Buyer) __________________________</p>
-                    <p>(Buyer) __________________________</p>
-                </div>
-                <div class="col-lg-4">
-                    <br>
-                    <p>DATE: _____________</p>
-                    <p>DATE: _____________</p>
-                </div>
+        <div class="row">
+            <div class="col-12 col-md-5 col-lg-4 col-xl-3 button-container">
+                <button @click="download" class="btn btn-lg btn-blue">Download as PDF</button>
+            </div>
+            <div class="col-12 col-md-7 col-lg-8 col-xl-9 button-container">
+                <router-link 
+                    to="/selling"
+                    tag="button"
+                    class="btn btn-lg btn-blue"
+                    >Back to Form
+                </router-link>
             </div>
         </div>
-        <div class="signatures container">
-            <div class="row">
-                <div class="col-lg-4">
-                    <p>SIGNED, SEALED AND DELIVERED in the presence of: </p>
-                    <p>(Witness) __________________________</p>
-                    <p>(Witness) __________________________</p>
-                </div>
-                <div class="col-lg-4">
-                    <p>IN WITNESS whereof I have hereunto set my hand and seal:</p><p>(Witness) __________________________</p>
-                    <p>(Seller) __________________________</p>
-                    <p>(Seller) __________________________</p>
-                </div>
-                <div class="col-lg-4">
-                    <br>
-                    <p>DATE: _____________</p>
-                    <p>DATE: _____________</p>
+        <div ref="content">
+            <div class="title">
+                <h4>Agreement of Purchase and Sale</h4>
+            </div>
+            <div class="help-text">
+                <p>GENERAL USE:  {{ generalUse }} </p>
+            </div>
+            <div class="contract-text">
+                <p>This Agreement of Purchase and Sale dated this {{ agreementDate }}</p>
+                <p><strong>BUYER, {{ buyerName }}</strong>, agrees to purchase from</p>
+                <p><strong>SELLER, {{sellerName }} </strong></p>, the following
+                <p><strong>REAL PROPERTY:</strong> situated at</p>
+                <p>Address {{ propertyStreetNumber }} {{ propertyStreetName }}, {{ propertyCity }}, {{ propertyProvince }}, {{ propertyPostal }}, {{ propertyCountry}}</p>
+                <p>and legally described as {{ propertyLegalDescription }}, the 'property' </p>
+                <p><strong>PURCHASE PRICE: </strong><span>$CDN Canadian Dollars {{ purchasePrice}}</span></p>
+            </div>
+            <p class="help-text">DEPOSIT: {{ deposit }} </p>
+            <div class="contract-text">
+                <p><strong>DEPOSIT: Buyer submits herewidth {{ purchasePrice }} $CDN Canadian Dollars</strong></p>
+                <p>by negotiable cheque payable to {{ depositHolder }} {{ depositInfo }}</p>
+            </div>
+            <p class="help-text">1. {{ irrevocability1 }} </p>
+            <p class="contract-text">1. IRREVOCABILITY: This Offer shall be irrevocable by {{sellerName}} {{ buyerName }} 
+                until {{irrevocabilityDate}}, {{irrevocability2}}
+            </p>
+            <p class="help-text">2. {{completion1}} </p>
+            <div class="contract-text">
+                <p>2. {{completion2}} {{completionDate}}</p>
+                <p>{{completion3}}</p>
+            </div>
+            <p class="help-text">3. {{chattels1}} </p> 
+            <div class="contract-text">
+                <p>3. CHATTELS INCLUDED: {{chattelsIncluded}}</p>
+                <p>{{chattels2}}</p>
+            </div>
+            <p class="help-text">4. {{fixtures}}</p>
+            <p class="contract-text">4. FIXTURES EXCLUDED: {{fixturesExcluded}} </p>
+            <p class="help-text">5. {{rentals}}</p>
+            <p class="contract-text">5. RENTAL ITEMS: {{rentalItems}} </p>
+            <p class="help-text">6. {{hst1}}</p>
+            <p class="contract-text"><strong>6. HST:</strong> {{hst2}} </p>
+            <p class="help-text">7. {{titleSearch1}} </p>
+            <div class="contract-text">
+            <p><strong>7. TITLE SEARCH:</strong>Buyer shall be allowed until 6:00 p.m. on the {{requisitionDate}}</p>
+            <p>{{titleSearch2}}</p> 
+            </div>
+            <p class="help-text">8. {{futureUse1}}</p>
+            <p class="contract-text"><strong>8. FUTURE USE: </strong>{{futureUse2}}</p>
+            <p class="help-text">9. {{title1}}</p>
+            <p class="contract-text"><strong>9. TITLE: </strong>{{title2}}</p>
+            <p class="help-text">10. {{closing1}}</p>
+            <p class="contract-text"><strong>10. {{closing2}}</strong></p>
+            <p class="help-text">11. {{discharge1}} </p>
+            <p class="contract-text"><strong>11. DOCUMENTS AND DISCHARGE: </strong>{{discharge2}}</p>
+            <p class="help-text">12. {{inspection1}}</p>
+            <p class="contract-text"><strong>12. INSPECTION: </strong>{{inspection2}}</p>
+            <p class="help-text">13. {{insurance1}}</p>
+            <p class="contract-text"><strong>13. INSURANCE: {{insurance2}}</strong></p>
+            <p class="help-text">14. {{planning1}}</p>
+            <p class="contract-text"><strong>14. PLANNING ACT: </strong>{{planning2}}</p>
+            <p class="help-text">15. {{preparation1}}</p>
+            <p class="contract-text"><strong>15. DOCUMENT PREPARATION: </strong>{{preparation2}}</p>
+            <p class="help-text">16. {{residency1}}</p>
+            <p class="contract-text"><strong>16. RESIDENCY: </strong>{{residency2}}</p>
+            <p class="help-text">17. {{adjustments1}}</p>
+            <p class="contract-text"><strong>17. ADJUSTMENTS: </strong>{{adjustments2}}</p>
+            <p class="help-text">18. {{assessment1}}</p>
+            <p class="contract-text"><strong>18. PROPERTY ASSESSMENT: </strong>{{assessment2}} </p>
+            <p class="help-text">19. {{time1}}</p>
+            <p class="contract-text"><strong>19. TIME LIMITS: </strong>{{time2}}</p>
+            <p class="help-text">20. {{tender1}}</p>
+            <p class="contract-text"><strong>20. TENDER: </strong>{{tender2}}</p>
+            <p class="help-text">21. {{family1}}</p>
+            <p class="contract-text"><strong>21. FAMILY LAW ACT: </strong>{{family2}}</p>
+            <p class="help-text">22. {{uffi1}}</p>
+            <p class="contract-text"><strong>22. UFFI: </strong>{{uffi1}}</p>
+            <p class="help-text">23. {{consumer1}}</p>
+            <p class="contract-text"><strong>23. {{consumer2}}</strong></p>
+            <p class="help-text">24. {{writing1}}</p>
+            <p class="contract-text"><strong>24. AGREEMENT IN WRITING: </strong>{{writing2}}</p>
+            <p class="help-text">25. {{timeDate1}}</p>
+            <p class="contract-text"><strong>25. TIME AND DATE: </strong>{{timeDate2}}</p>
+            <p class="help-text">26. {{successors1}}</p>
+            <p class="contract-text"><strong>26. SUCCESSORS AND ASSIGNS: </strong>{{successors2}}</p>
+            <div class="signatures container">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <p>SIGNED, SEALED AND DELIVERED in the presence of: </p>
+                        <p>(Witness) __________________________</p>
+                        <p>(Witness) __________________________</p>
+                    </div>
+                    <div class="col-lg-4">
+                        <p>IN WITNESS whereof I have hereunto set my hand and seal:</p><p>(Witness) __________________________</p>
+                        <p>(Buyer) __________________________</p>
+                        <p>(Buyer) __________________________</p>
+                    </div>
+                    <div class="col-lg-4">
+                        <br>
+                        <p>DATE: _____________</p>
+                        <p>DATE: _____________</p>
+                    </div>
                 </div>
             </div>
-        </div>
-        <p class="contract-text"><strong>{{spousal}}</strong></p>
-        <div class="signatures container">
-            <div class="row">
-                <div class="col-lg-4">
-                    <p>(Witness) __________________________</p>
-                </div>
-                <div class="col-lg-4">
-                    <p>(Spouse) __________________________</p>
-                </div>
-                <div class="col-lg-4">
-                    <p>DATE: _____________</p>
+            <div class="signatures container">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <p>SIGNED, SEALED AND DELIVERED in the presence of: </p>
+                        <p>(Witness) __________________________</p>
+                        <p>(Witness) __________________________</p>
+                    </div>
+                    <div class="col-lg-4">
+                        <p>IN WITNESS whereof I have hereunto set my hand and seal:</p><p>(Witness) __________________________</p>
+                        <p>(Seller) __________________________</p>
+                        <p>(Seller) __________________________</p>
+                    </div>
+                    <div class="col-lg-4">
+                        <br>
+                        <p>DATE: _____________</p>
+                        <p>DATE: _____________</p>
+                    </div>
                 </div>
             </div>
-        </div>
-        <p class="contract-text"><strong>CONFIRMATION OF ACCEPTANCE:</strong>{{acceptance}} {{agreementDate}}</p>
-        <div class="signatures container">
-            <p>Signature of Seller or Buyer ________________________</p>
-        </div>
+            <p class="contract-text"><strong>{{spousal}}</strong></p>
+            <div class="signatures container">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <p>(Witness) __________________________</p>
+                    </div>
+                    <div class="col-lg-4">
+                        <p>(Spouse) __________________________</p>
+                    </div>
+                    <div class="col-lg-4">
+                        <p>DATE: _____________</p>
+                    </div>
+                </div>
+            </div>
+            <p class="contract-text"><strong>CONFIRMATION OF ACCEPTANCE:</strong>{{acceptance}} {{agreementDate}}</p>
+            <div class="signatures container">
+                <p>Signature of Seller or Buyer ________________________</p>
+            </div>
+        </div>    
     </div>
 </template>
 
 <script>
 import { mapGetters } from 'vuex'
+import jspdf from 'jspdf'
 import copy from '../copy/copy.json'
 
 export default {
+    methods: {
+        download() {
+            const doc = new jspdf()
+            const html = this.$refs.content.innerHTML
+            doc.fromHTML(html,15,15, {
+                width: 150
+            })
+            doc.save("SalesAgreement.pdf")
+        }
+    },
     data() {
         return {
             generalUse: copy.agreement.generalUse,
@@ -236,13 +262,22 @@ export default {
 </script>
 
 <style lang="scss">
-    .contract-text span {
-        float: right;
+h4 {
+    margin: 40px 0px;
+}
+.contract-text span {
+    float: right;
+}
+.contract-text {
+    color: $dark;
+}
+.help-text {
+    color: $dark-blue;
+}
+
+@media screen and (max-width: 768px) {
+    .button-container {
+        text-align: center;
     }
-    .contract-text {
-        color: $dark;
-    }
-    .help-text {
-        color: $dark-blue;
-    }
+}
 </style>

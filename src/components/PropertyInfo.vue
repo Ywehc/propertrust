@@ -1,67 +1,67 @@
 <template>
   <div>
         <h4 class="tab-content-heading">Property Information</h4>
-        <div class="mt-2">Street Number: {{ propertyStreetNumber }}</div>
+        <div class="mt-4">Street Number: {{ propertyStreetNumber }}</div>
         <b-form-input 
             type="text"
             v-model="propertyStreetNumber" 
             placeholder="Street Number">
         </b-form-input>
-        <div class="mt-2">Street Name: {{ propertyStreetName }}</div>
+        <div class="mt-4">Street Name: {{ propertyStreetName }}</div>
         <b-form-input 
             type="text" 
             v-model="propertyStreetName" 
             placeholder="Street Name">
         </b-form-input>             
-        <div class="mt-2">City: {{ propertyCity }}</div>
+        <div class="mt-4">City: {{ propertyCity }}</div>
         <b-form-input 
             type="text" 
             v-model="propertyCity" 
             placeholder="City">
         </b-form-input> 
-        <div class="mt-2">Province: {{ propertyProvince }}</div>
+        <div class="mt-4">Province: {{ propertyProvince }}</div>
         <b-form-input 
             type="text" 
             v-model="propertyProvince" 
             placeholder="Province">
         </b-form-input>
-        <div class="mt-2">Postal Code: {{ propertyPostal}}</div>
+        <div class="mt-4">Postal Code: {{ propertyPostal}}</div>
         <b-form-input 
             type="text" 
             v-model="propertyPostal" 
             placeholder="Postal Code">
         </b-form-input>
-        <div class="mt-2">Property Frontage: {{ propertyFrontage }}</div>
+        <div class="mt-4">Property Frontage: {{ propertyFrontage }}</div>
         <b-form-input 
             type="text" 
             v-model="propertyFrontage" 
             placeholder="North - South - East - West">
         </b-form-input>
-        <div class="mt-2">Property Depth: {{ propertyDepth }}</div>
+        <div class="mt-4">Property Depth: {{ propertyDepth }}</div>
         <b-form-input 
             type="text" 
             v-model="propertyDepth" 
             placeholder="Property Depth - approximate">
         </b-form-input>
-        <div class="mt-2">Legal description of land including easements not described elsewhere: {{ propertyLegalDescription }}</div>
+        <div class="mt-4">Legal description of land including easements not described elsewhere: {{ propertyLegalDescription }}</div>
         <b-form-input 
             type="text" 
             v-model="propertyLegalDescription" 
             placeholder="Legal Description of Property">
         </b-form-input>
-        <div class="mt-2">Chattels Included: {{ chattelsIncluded }}</div>
+        <div class="mt-4">Chattels Included: {{ chattelsIncluded }}</div>
         <b-form-input 
             type="text" 
             v-model="chattelsIncluded" 
             placeholder="Chattels Included">
         </b-form-input>
-        <div class="mt-2">Fixtures Excluded: {{ fixturesExcluded }}</div>
+        <div class="mt-4">Fixtures Excluded: {{ fixturesExcluded }}</div>
         <b-form-input 
             type="text" 
             v-model="fixturesExcluded" 
             placeholder="Fixtures Excluded">
         </b-form-input>
-        <div class="mt-2">Rental Items: {{ rentalItems }}</div>
+        <div class="mt-4">Rental Items: {{ rentalItems }}</div>
         <b-form-input 
             type="text" 
             v-model="rentalItems" 
@@ -71,9 +71,6 @@
 </template>
 
 <script>
-
-// import copy from '../copy/copy.json'
-
 export default {
     computed: {
         propertyStreetNumber: {
