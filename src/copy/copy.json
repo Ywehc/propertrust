@@ -11,6 +11,12 @@
  "seller": {
      "generateAgreement": "I acknowledge this application is an idea in progress and will not hold it's creator liable for anything."
  },
+ "howItWorks": {
+     "p1": "Not everyone can afford to pay Realtor fees of four, five or even six percent of their home or apartment's value when they need to sell.",
+     "p2": "Our platform helps buyers and sellers of homes and apartments create lawyer-ready sales agreements.",
+     "p3": "We walk you through the agreement in simple language and then convert that into a convenient, lawyer-ready pdf",
+     "p4": "That's our current solution, but we can't wait for you to see some of the exciting ideas and features we have in the works!"
+ },
  "agreement": {
     "deposit":"The buyer includes a deposit in the Offer to give it authenticity and to show their sincerity to the seller. The deposit is considered part of the purchase price and is ultimately adjusted as a credit to the Buyer on closing.",
     "generalUse": "The Agreement of Purchase and Sale is the docoument that is used to state the Buyer's desire to purchase the property. It is commonly referred to as an Offer. This document also allows the Buyer a chance to outline in detail all of the conditions they wish to be placed in their Offer to buy the Seller's property. After the Offer is prepared and signed by the Buyer, it is presented to the Seller for acceptance. The Seller, in turn, may want to make changes to the Offer for the Bueyr to consider.",

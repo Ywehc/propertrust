@@ -10,7 +10,7 @@ import VCalendar from 'v-calendar';
 import router from './router'
 
 import "@/style/variables.scss";
-import "@/style/global.css";
+import "@/style/global.scss";
 
 import 'es6-promise/auto'
 
