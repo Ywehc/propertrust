@@ -1,5 +1,6 @@
 <template>
   <div>
+        <h4 class="tab-content-heading">Property Information</h4>
         <div class="mt-2">Street Number: {{ propertyStreetNumber }}</div>
         <b-form-input 
             type="text"
@@ -205,8 +206,3 @@ export default {
 }
 
 </script>
-
-<style style lang="scss" scoped>
-
-
-</style>

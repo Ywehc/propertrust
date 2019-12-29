@@ -36,6 +36,7 @@ export default {
 @media only screen and (max-width: 490px) {
   .container h2 {
     font-size: 1.5em;
+    padding: 20px;
   }
 }
 

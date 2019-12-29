@@ -1,8 +1,12 @@
 <template>
-    <div>
-        <div class="terms">
-            <input type="checkbox" id="checkbox" v-model="checked">
-            <label for="checkbox">{{terms}}</label>
+    <div class="container">
+        <h4 class="tab-content-heading">Terms & Conditions</h4>
+        <div class="terms row">
+            <input type="checkbox" 
+                v-model="checked"
+                class="col-2 checkbox"
+            >  
+            <label for="checkbox" class="col-10">{{terms}}</label>
         </div>
         <router-link 
             to="/agreement"
@@ -37,6 +41,13 @@ button.btn-lg {
     width: 260px;
     background: $light-blue;
     color: white;
-    }
-
+}
+.checkbox {
+    margin-top: 20px;
+}
+@media screen and (max-width: 576px) {
+  .btn-lg {
+      margin-top: 40px;
+  }
+}
 </style>

@@ -1,5 +1,6 @@
 <template>
   <div>
+    <h4 class="tab-content-heading">Contract Information</h4>
     <b-form-input 
         type="text"
         v-model="sellerName"
