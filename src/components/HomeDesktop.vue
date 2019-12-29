@@ -27,8 +27,10 @@
         <div class="col-4 how-it-works">
           <div class="how-it-works-button">
             <div class="button-content">
+              <router-link to="/how-it-works">
                 <h2>How it Works</h2>
                 <br>
+              </router-link>
             </div>
           </div>
         </div> 
@@ -81,9 +83,9 @@ h3 {
 }
 .button-content:hover  {
   background: $dark;
-  border: 5px solid $light;
+  border: 5px solid $light-blue;
   h2, p {
-    color: $light;
+    color: $light-blue;
   }
 }
 .buyer-button {
@@ -96,7 +98,7 @@ h3 {
 .how-it-works-button {
   background-image: linear-gradient(to right, #81c3d7, white);
 }
-.buyer-button a, .seller-button a {
+.buyer-button a, .seller-button a, .how-it-works-button a {
   color: $dark;
   text-decoration: none;
 }

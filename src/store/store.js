@@ -34,8 +34,7 @@ export default new Vuex.Store({
             irrevocabilityDate: '',
             completionDate: '',
             requisitionDate: '',
-            hasHst: false,
-            hstIncluded: ''
+            hasHst: false
         }
     },
     getters: {
@@ -101,6 +100,9 @@ export default new Vuex.Store({
         },
         requisitionDate: state => {
             return state.contract.requisitionDate;
+        },
+        hasHst: state => {
+            return state.contract.hasHst;
         },
         getField
     },
