@@ -1,7 +1,7 @@
 {"home": {
     "header": "Simple, transparent real estate agreements without the costs of agents.",
     "subheader": "subheading",
-    "description": "is a free platform for buyers and sellers of real estate who are seeking a quick, transparent way to complete a transaction without the high costs of using a realtor.",
+    "description": "is a free platform for buyers and sellers of residential real estate who are seeking a quick way to complete a property transaction without the high costs of using a realtor.",
     "lawyer": "Our easy-to-understand language helps you generate a lawyer-reviewed Sales Agreement in minutes, making it simple for your preferred real estate attorney to finalize your sale."
     },
  "brand": "ProperTrust",
@@ -12,9 +12,9 @@
      "generateAgreement": "I acknowledge this application is an idea in progress and will not hold it's creator liable for anything."
  },
  "howItWorks": {
-     "p1": "Not everyone can afford to pay Realtor fees of four, five or even six percent of their home or apartment's value when they need to sell.",
+     "p1": "Not everyone can afford to pay Realtor fees of four, five or even six percent of their home or apartment's value when it's time to sell.",
      "p2": "Our platform helps buyers and sellers of homes and apartments create lawyer-ready sales agreements.",
-     "p3": "We walk you through the agreement in simple language and then convert that into a convenient, lawyer-ready pdf",
+     "p3": "We walk you through the agreement in simple language and then convert that into a convenient, lawyer-ready pdf.",
      "p4": "That's our current solution, but we can't wait for you to see some of the exciting ideas and features we have in the works!"
  },
  "agreement": {
@@ -73,7 +73,8 @@
     "successors1": "SUCCESSORS AND ASSIGNS: In the event one of the parties to the Agreement dies, their heirs or executors are bound by the Agreement.",
     "successors2": "The heirs, executors, administrators, successors and assigns of the undersigned are bound by the terms herein.",
     "spousal": "SPOUSAL CONSENT: The Undersigned Spouse of the Seller hereby consents to the disposition evidenced herein pursuant to the provisions of the Family Law Act, R.S.O.1990, and hereby agrees with the Buyer that he/she will execute all necessary or incidental documents to give full force and effect to the sale evidenced herein.",
-    "acceptance": "Notwithstanding anything contained herein to the contrary, I confirm this Agreement with all changes both typed and written was finally accepted by all parties at this day"
+    "acceptance": "Notwithstanding anything contained herein to the contrary, I confirm this Agreement with all changes both typed and written was finally accepted by all parties at this day",
+    "downloadPdf": "Download your Sales Agreement, or make revisions by clicking Back to Form"
  }
 }
 

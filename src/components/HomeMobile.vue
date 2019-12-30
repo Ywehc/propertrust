@@ -16,9 +16,6 @@
             tag="button"
             class="btn btn-primary btn-lg how-it-works">How it works
         </router-link>
-        <br>
-        <br>
-        <button type="button" class="btn btn-primary btn-sm contact">Contact Us</button>
       </div>
 </template>
 

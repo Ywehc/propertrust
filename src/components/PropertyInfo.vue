@@ -1,67 +1,67 @@
 <template>
   <div>
         <h4 class="tab-content-heading">Property Information</h4>
-        <div class="mt-4">Street Number: {{ propertyStreetNumber }}</div>
+        <div class="mt-4">Street Number: </div>
         <b-form-input 
             type="text"
             v-model="propertyStreetNumber" 
             placeholder="Street Number">
         </b-form-input>
-        <div class="mt-4">Street Name: {{ propertyStreetName }}</div>
+        <div class="mt-4">Street Name: </div>
         <b-form-input 
             type="text" 
             v-model="propertyStreetName" 
             placeholder="Street Name">
         </b-form-input>             
-        <div class="mt-4">City: {{ propertyCity }}</div>
+        <div class="mt-4">City: </div>
         <b-form-input 
             type="text" 
             v-model="propertyCity" 
             placeholder="City">
         </b-form-input> 
-        <div class="mt-4">Province: {{ propertyProvince }}</div>
+        <div class="mt-4">Province: </div>
         <b-form-input 
             type="text" 
             v-model="propertyProvince" 
             placeholder="Province">
         </b-form-input>
-        <div class="mt-4">Postal Code: {{ propertyPostal}}</div>
+        <div class="mt-4">Postal Code: </div>
         <b-form-input 
             type="text" 
             v-model="propertyPostal" 
             placeholder="Postal Code">
         </b-form-input>
-        <div class="mt-4">Property Frontage: {{ propertyFrontage }}</div>
+        <div class="mt-4">Property Frontage: </div>
         <b-form-input 
             type="text" 
             v-model="propertyFrontage" 
             placeholder="North - South - East - West">
         </b-form-input>
-        <div class="mt-4">Property Depth: {{ propertyDepth }}</div>
+        <div class="mt-4">Property Depth: </div>
         <b-form-input 
             type="text" 
             v-model="propertyDepth" 
             placeholder="Property Depth - approximate">
         </b-form-input>
-        <div class="mt-4">Legal description of land including easements not described elsewhere: {{ propertyLegalDescription }}</div>
+        <div class="mt-4">Legal description of land including easements not described elsewhere: </div>
         <b-form-input 
             type="text" 
             v-model="propertyLegalDescription" 
             placeholder="Legal Description of Property">
         </b-form-input>
-        <div class="mt-4">Chattels Included: {{ chattelsIncluded }}</div>
+        <div class="mt-4">Chattels Included:</div>
         <b-form-input 
             type="text" 
             v-model="chattelsIncluded" 
             placeholder="Chattels Included">
         </b-form-input>
-        <div class="mt-4">Fixtures Excluded: {{ fixturesExcluded }}</div>
+        <div class="mt-4">Fixtures Excluded: </div>
         <b-form-input 
             type="text" 
             v-model="fixturesExcluded" 
             placeholder="Fixtures Excluded">
         </b-form-input>
-        <div class="mt-4">Rental Items: {{ rentalItems }}</div>
+        <div class="mt-4">Rental Items: </div>
         <b-form-input 
             type="text" 
             v-model="rentalItems" 
