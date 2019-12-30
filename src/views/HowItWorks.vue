@@ -23,17 +23,25 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-    h2 {
-        font-family: 'Passion One', cursive;
-        color: $dark;
-        text-align: center;
-        margin-bottom: 20px;
-    }
-    p {
-      font-size: 20px;
-    }
-    .container {
-        min-height: 60vh;
-        padding: 20px 60px;
-    }
+  p {
+    font-size: 2rem;
+    font-family: 'Varela Round', sans-serif;
+    color: $dark;
+    text-align: left;
+  }
+  .container {
+      min-height: 80vh;
+      padding-top: 200px;
+  }
+@media screen and (max-width: 576px) {
+  p {
+    font-size: 1.3rem;
+    text-align: left;
+  }
+  .container {
+    padding: 10px 40px;
+    min-height: 60vh;
+    margin-top: 40px;
+  }
+}
 </style>

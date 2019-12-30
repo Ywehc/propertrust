@@ -42,7 +42,9 @@ export default {
 input[type=checkbox] {
     transform: scale(2);
 }
-
+.btn-blue {
+    margin-top: 20px;
+}
 @media screen and (max-width: 576px) {
     .checkbox {
     margin-top: 20px;

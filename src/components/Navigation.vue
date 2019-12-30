@@ -57,6 +57,7 @@ export default {
   position: absolute;
   right: 20px;
   color: $dark;
+  font-family: 'Varela Round', sans-serif;
   ul {
     display: flex;
     list-style-type: none;

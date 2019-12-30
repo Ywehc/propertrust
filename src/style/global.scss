@@ -8,7 +8,20 @@
     width: 260px;
     background: $light-blue;
     color: white;
-    margin-top: 40px!important;
+    border-color: $dark;
+    margin: 6px auto; 
+}
+.btn-mid-blue {
+    width: 260px;
+    background: $mid-blue;
+    color: white;
+    border-color: $dark;
+    margin: 6px auto; 
+}
+.btn-dark-blue {
+    width: 260px;
+    background: $dark;
+    color: white;
     border-color: $dark;
     margin: 6px auto; 
 }

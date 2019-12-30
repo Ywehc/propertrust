@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <div>
-      <b-tabs content-class="mt-3 ">
+      <b-tabs content-class="mt-3" v-model="tabIndex">
         <b-tab title="Property" :title-item-class="'tab-container'">
             <property-info></property-info>
         </b-tab>           
@@ -15,6 +15,20 @@
           <generate-agreement></generate-agreement>
         </b-tab>
       </b-tabs>
+    </div>
+    <div class="text-center">
+      <b-button-group class="mt-2">
+        <b-button 
+          @click="tabIndex--" 
+          v-if="tabIndex !== 0"
+          class="btn btn-lg btn-dark-blue">Previous
+        </b-button>
+        <b-button 
+          @click="tabIndex++" 
+          v-if="tabIndex !== 3"
+          class="btn btn-lg btn-blue">Next
+        </b-button>
+      </b-button-group>
     </div>
   </div>
 </template>
@@ -31,6 +45,11 @@ export default {
     ContractInfo,
     saleSummary: Summary,
     GenerateAgreement
+  },
+  data() {
+    return {
+      tabIndex: 0
+    }
   }
 }
 </script>
@@ -49,5 +68,12 @@ export default {
 }
 .mt-3 {
   min-height: 50vh;
+}
+.text-center {
+  margin-top: 20px;
+  .btn {
+    width: 120px;
+    margin: 10px;
+  }
 }
 </style>

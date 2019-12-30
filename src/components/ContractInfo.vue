@@ -1,15 +1,15 @@
 <template>
   <div>
     <h4 class="tab-content-heading">Contract Information</h4>
+    <p class="mt-4">Seller Name:</p>
     <b-form-input 
         type="text"
         v-model="sellerName"
         placeholder="Legal Name of Seller">
     </b-form-input>
-    <div class="mt-4">{{ sellerName }}</div>
-    <p>Agreement Date: {{ contractAgreementDate }}</p>
+    <p class="mt-4">Agreement Date:</p>
     <vc-date-picker v-model="contractAgreementDate"/>
-    <div class="mt-4">Purchase Price: {{ purchasePrice }}</div>
+    <div class="mt-4">Purchase Price:</div>
     <b-form-input 
       type="number" 
       v-model="purchasePrice" 
@@ -20,24 +20,23 @@
       <label for="checkbox"></label>
       <span>Check if this is a newly built property and HST will be in addition to the listed Purchase Price</span>
     </div>
-    <div class="mt-4">Deposit Amount: {{ depositAmount }}</div>
+    <div class="mt-4">Deposit Amount: </div>
     <b-form-input 
       type="text" 
       v-model="depositAmount" 
       placeholder="Deposit in Dollars (CDN$)">
     </b-form-input>
-    <div class="mt-4">Deposit Holder: {{ depositHolder }}</div>
+    <div class="mt-4">Deposit Holder: </div>
     <b-form-input 
       type="text" 
       v-model="depositHolder" 
       placeholder="Name of deposit holder">
     </b-form-input>
-    <p class="mt-4">Irrevocability Date: {{ contractIrrevocabilityDate }}</p>
+    <p class="mt-4">Irrevocability Date: </p>
     <vc-date-picker v-model="contractIrrevocabilityDate"/>
-    <p class="mt-4">Completion Date: {{ contractCompletionDate }}</p>
+    <p class="mt-4">Completion Date: </p>
     <vc-date-picker v-model="contractCompletionDate"/>
-    <div class="mt-4">Deposit Holder: {{ depositHolder }}</div>
-    <p class="mt-4">Title Search/Requisition Date: {{ contractRequisitionDate }}</p>
+    <p class="mt-4">Title Search/Requisition Date:</p>
     <vc-date-picker v-model="contractRequisitionDate"/>
   </div>
 </template>
@@ -113,3 +112,10 @@ export default {
 }
 
 </script>
+
+<style lang="scss" scoped>
+#HstCheckbox {
+  margin-top: 16px;
+  margin-right: 8px;
+}
+</style>

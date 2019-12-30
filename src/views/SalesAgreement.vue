@@ -1,5 +1,6 @@
 <template>
     <div class="container">
+        <h4 class="title">{{downloadPdf}}</h4>
         <div class="row">
             <div class="col-12 col-md-5 col-lg-4 col-xl-3 button-container">
                 <button @click="download" class="btn btn-lg btn-blue">Download as PDF</button>
@@ -13,21 +14,21 @@
                 </router-link>
             </div>
         </div>
+        <agreement-referrals v-if="windowWidth > 490"></agreement-referrals>
         <div ref="content">
-            <div class="title">
-                <h4>Agreement of Purchase and Sale</h4>
-            </div>
-            <div class="help-text">
-                <p>GENERAL USE:  {{ generalUse }} </p>
-            </div>
+            <h4 class="title">Agreement of Purchase and Sale</h4>
+            <p class="help-text">GENERAL USE:  {{ generalUse }} </p>
             <div class="contract-text">
                 <p>This Agreement of Purchase and Sale dated this {{ agreementDate }}</p>
-                <p><strong>BUYER, {{ buyerName }}</strong>, agrees to purchase from</p>
-                <p><strong>SELLER, {{sellerName }} </strong></p>, the following
-                <p><strong>REAL PROPERTY:</strong> situated at</p>
-                <p>Address {{ propertyStreetNumber }} {{ propertyStreetName }}, {{ propertyCity }}, {{ propertyProvince }}, {{ propertyPostal }}, {{ propertyCountry}}</p>
-                <p>and legally described as {{ propertyLegalDescription }}, the 'property' </p>
-                <p><strong>PURCHASE PRICE: </strong><span>$CDN Canadian Dollars {{ purchasePrice}}</span></p>
+                <p><strong>BUYER ____________________________</strong>, agrees to purchase from
+                    <strong> SELLER, {{sellerName }} </strong>, the following <strong>REAL PROPERTY</strong> situated at
+                </p>
+                <p>Address {{ propertyStreetNumber }} {{ propertyStreetName }}, {{ propertyCity }}, 
+                    {{ propertyProvince }}, {{ propertyPostal }}, {{ propertyCountry}}
+                    and legally described as {{ propertyLegalDescription }}, the 'property' 
+                </p>
+                <p><strong>PURCHASE PRICE: $CDN Canadian Dollars<span>{{ purchasePrice}}</span></strong>
+                </p>
             </div>
             <p class="help-text">DEPOSIT: {{ deposit }} </p>
             <div class="contract-text">
@@ -153,16 +154,34 @@
             <div class="signatures container">
                 <p>Signature of Seller or Buyer ________________________</p>
             </div>
-        </div>    
+        </div>
+        <div class="row">
+            <div class="col-12 col-md-5 col-lg-4 col-xl-3 button-container">
+                <button @click="download" class="btn btn-lg btn-blue">Download as PDF</button>
+            </div>
+            <div class="col-12 col-md-7 col-lg-8 col-xl-9 button-container">
+                <router-link 
+                    to="/selling"
+                    tag="button"
+                    class="btn btn-lg btn-blue"
+                    >Back to Form
+                </router-link>
+            </div>
+        </div>
+        <agreement-referrals></agreement-referrals>
     </div>
 </template>
 
 <script>
 import { mapGetters } from 'vuex'
-import jspdf from 'jspdf'
 import copy from '../copy/copy.json'
+import AgreementReferrals from '../components/AgreementReferrals.vue'
+import jspdf from 'jspdf'
 
 export default {
+    components: {
+        AgreementReferrals
+    },
     methods: {
         download() {
             const doc = new jspdf()
@@ -173,8 +192,13 @@ export default {
             doc.save("SalesAgreement.pdf")
         }
     },
+    mounted () {
+        window.scrollTo(0, 0)
+    },
     data() {
         return {
+            windowWidth: screen.width,
+            downloadPdf: copy.agreement.downloadPdf,
             generalUse: copy.agreement.generalUse,
             deposit: copy.agreement.deposit,
             depositInfo: copy.agreement.depositInfo,
@@ -261,9 +285,9 @@ export default {
 }
 </script>
 
-<style lang="scss">
-h4 {
-    margin: 40px 0px;
+<style lang="scss" scoped>
+.title {
+    margin: 30px 0px;
 }
 .contract-text span {
     float: right;
@@ -274,9 +298,15 @@ h4 {
 .help-text {
     color: $dark-blue;
 }
-
+.button-container {
+    margin: 20px auto;
+}
 @media screen and (max-width: 768px) {
     .button-container {
+        text-align: center;
+        margin: 0px auto;
+    }
+    .title {
         text-align: center;
     }
 }
