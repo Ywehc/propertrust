@@ -24,7 +24,7 @@ export default {
 
 <style lang="scss" scoped>
   p {
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-family: 'Varela Round', sans-serif;
     color: $dark;
     text-align: left;

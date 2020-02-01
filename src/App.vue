@@ -1,8 +1,8 @@
 <template>
   <div id="app">
     <Navigation></Navigation>
-    <router-view/>
-    <Footer></Footer>
+    <router-view class="main"></router-view>
+    <Footer class="footer"></Footer>
   </div>
 </template>
 
@@ -19,4 +19,25 @@ export default {
 </script>
 
 <style lang="scss">
+html, body {
+  height: 100%;
+}
+body {
+  display: flex;
+  flex-direction: column;
+}
+.main {
+  flex: 1 0 auto;
+  min-height: 750px;
+  margin-top: 50px;
+}
+.footer {
+  flex-shrink: 0;
+}
+@media screen and (max-width: 768px) {
+  .main {
+    min-height: 440px;
+    margin-top: 20px;
+  }
+}
 </style>

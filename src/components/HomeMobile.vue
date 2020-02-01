@@ -35,7 +35,7 @@ export default {
 <style lang="scss" scoped>
 
 .container {
-    padding: 20px;
+    padding: 10px;
     display: flex;
     flex-direction: column;
 }
