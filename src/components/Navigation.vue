@@ -49,7 +49,7 @@ export default {
   }
 }
 .nav-shell {
-  padding: 10px;
+  padding: 5px;
   display: flex;
   font-family: 'Passion One', cursive;
 }
@@ -67,6 +67,12 @@ export default {
   }
   li:hover {
     color: $light-blue;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .nav-desktop {
+    display: none;
   }
 }
 

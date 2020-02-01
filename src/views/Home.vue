@@ -1,6 +1,6 @@
 <template>
-  <div class="home-container" >
-    <home-desktop v-if="windowWidth > 490"></home-desktop>
+  <div>
+    <home-desktop v-if="windowWidth > 768"></home-desktop>
     <home-mobile v-else></home-mobile>  
   </div>
 </template>

@@ -27,15 +27,23 @@ export default {
 <style style lang="scss" scoped>
 
 footer {
-    height: 20vh;
     background: $dark;
     color: $light;
+    height: 200px;
 }
 
 p {
     text-align: center;
     margin:30px ;
     padding: 60px;
+}
+@media only screen and (min-height: 950px) {
+  footer {
+    height: 400px;
+  }
+  p {
+    padding-top: 150px;
+  }
 }
 
 </style>

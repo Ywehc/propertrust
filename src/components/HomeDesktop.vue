@@ -1,11 +1,11 @@
 <template>
   <div class="container">
       <div class="banner-blue-houses">
-        <h1>{{ heading }}</h1>
+        <h2>{{ heading }}</h2>
       </div> 
       <buttons-desktop></buttons-desktop>
-      <h3 class="description">{{brand}} {{description}}</h3>
-      <h3 class="description">{{lawyer}}</h3>    
+      <p class="description">{{brand}} {{description}}</p>
+      <p class="description">{{lawyer}}</p>    
       
     </div>
 </template>
@@ -31,29 +31,29 @@ export default {
 
 <style lang="scss" scoped>
 
-h1 {
-  font-size: 30px;
+h2 {
+  font-size: 24px;
   text-align: center;
   color: white;
-  width: 80%;
   margin: auto;
-  padding-top: 120px;
+  padding: 50px;
 }
-h3 {
-  margin: 50px auto;
-  text-align: center;
+p {
   font-family: 'Varela Round', sans-serif;
+  font-size: 18px;
+  margin: 20px;
 }
 .banner-blue-houses {
   background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../assets/blue-houses.jpg');
   background-size: cover;
-  background-position-y: 20%;
-  min-height: 25vh;
-  margin-bottom: 30px;
+  background-position-y: 10%;
+  height: 200px;
+  margin-bottom: 20px;
+  border-radius: 5px;
 }
 
 @media only screen and (min-width: 1200px) {
-  h1 {
+  h2 {
     font-size: 230%;
   }
 }
