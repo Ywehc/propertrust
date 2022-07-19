@@ -1,4 +1,4 @@
-# propertrust
+Real Estate Sales Agreement generator that helped me learn two way data binding.
 
 ## Project setup
 ```
